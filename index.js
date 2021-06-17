@@ -49,14 +49,14 @@ class Airplane {
     }
     eat(someFood){
       if(this.stomach.length < 10){
-        this.stomach.push(someFood);
+        this.stomach.push(someFood); //pushes user's meal into stomach array as long as it doesn't go above 10 food items
       }
     }
     poop(){
-        return this.stomach = [];
+        return this.stomach = [];//emptys our stomach array
       }
     toString(){
-      return `${this.name}, ${this.age}`;
+      return `${this.name}, ${this.age}`; //returns users name and age in string
     }
   }
   
@@ -82,15 +82,15 @@ class Airplane {
      this.odometer = 0;
    }
     fill(gallons){
-      this.tank += gallons;
+      this.tank += gallons; //adds x gallons into our tank
     }
     drive(distance){
-      this.odometer += distance;
-      this.tank -= distance / this.milesPerGallon;
-      if(this.tank < distance/this.milesPerGallon){
-        this.odometer += this.tank * this.milesPerGallon;
-        this.tank = 0;
-        return `I ran out of fuel at ${this.odometer} miles!`;
+      this.odometer += distance; // adds x distance to our odometer
+      this.tank -= distance / this.milesPerGallon; //removes gallons from tank
+      if(this.tank < distance/this.milesPerGallon){ //checks if x gallons is enough for x distance based on car's x milesPerGallon
+        this.odometer += this.tank * this.milesPerGallon; // adds max possible distance from tank to odometer
+        this.tank = 0; //empty the tank
+        return `I ran out of fuel at ${this.odometer} miles!`; // prints max possible distance
       }
     }
   }
