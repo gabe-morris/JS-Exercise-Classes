@@ -201,10 +201,10 @@ class Airplane {
     this.favInstructor = attributes.favInstructor;
   }
   standUp(channel){
-    return `${this.name} announces to ${channel}, @channel standy times!`;
+    return `${this.name} announces to ${channel}, @channel standy times!`;//returns string with name and given channel
   }
   debugsCode(student,subject){
-    return `${this.name} debugs ${student.name}'s code on ${subject}`;
+    return `${this.name} debugs ${student.name}'s code on ${subject}`;//returns string with name, given student name, and given subject
   }
  }
   /*
